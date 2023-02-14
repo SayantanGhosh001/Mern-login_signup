@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 const { ServerApiVersion } = require("mongodb");
-const uri = process.env.SECRET_DB;
+const uri =
+  "mongodb+srv://sayantanGhosh:qAqPFMBYo5SulAAP@cluster0.sy5ip30.mongodb.net/?retryWrites=true&w=majority";
 mongoose.set("strictQuery", true);
 mongoose
   .connect(uri, {
