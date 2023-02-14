@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --text: #1e1f24;
+  --primary: #fff;
+  --secondary: #f4f5f9;
+  --accent: #6944c5;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  background: #d3d0e1;
+  color: var(--text);
+  /* height: 100vh; */
+  background-image: url("../images/Dark-Forest.jpg");
+    background-repeat: no-repeat;
+   background-size: cover;
+}
+.underline{
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.underline:hover {
+  text-decoration: underline;
+}
+.grid {
+  display: grid;
+}
+.flex {
+  display: flex;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.page-grid {
+  width: min(calc(80% - 1rem), 1024px);
+  margin: 1rem auto;
+  background: #00000096;
+  min-height: 33rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-sizing: 0 0 0 4px var(--secondary);
+}
+.banner img {
+  width: 150px;
+}
+.form-wrapper,
+.banner {
+  padding: 1rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.header p {
+  font-weight: 500;
+  opacity: 0.9;
+  color: #fff; 
+  opacity: 1;
+}
+.header h1{
+    color: #fff;
+     opacity: 1;
+}
+.footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.field input {
+  font-size: 1rem;
+  line-height: 48px;
+  padding: 0 1rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 0 2px var(--secondary);
+}
+.field label{
+    color: #fff;
+}
+.field input::placeholder {
+  font-family: inherit;
+}
+.pass{
+    color: #fff;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  margin-top: 1.25rem;
+  cursor: pointer;
+  background: var(--secondary);
+  line-height: 48px;
+  font-family: inherit;
+  font-size: inherit;
+   opacity: 1;
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--primary);
+}
+.pass-section {
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.footer p {
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+  .page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* .banner {
+    background: var(--secondary); 
+    order: 2;
+  } */
+  .banner img {
+    width: 100%;
+    height: 100%;
+    opacity: .85;
+  }
+}
+.pd_0{
+  padding:0 !important
+}

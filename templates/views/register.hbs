@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>headerlinks}}
+    <link rel="stylesheet" href="./css/register.css">
+
+</head>
+    
+<body>
+         {{>navbar}}
+<div class="flex center">
+  <div class="page-grid grid">
+    <section class="banner grid center pd_0">
+    <div id="message">
+  <h3>Password must contain the following:</h3>
+  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+  <p id="number" class="invalid">A <b>number</b></p>
+  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+</div>
+    </section> 
+    <section class="form-wrapper grid center">
+      <form action="/register" method="POST" class="form-section">
+        <div class="header">
+          <h1>Welcome Back</h1>
+          <p>Welcome back, Please enter your details</p>
+        </div>
+        <div class="wrap">
+         <div class="field">
+          <label for="">First Name</label>
+          <input type="text" placeholder="Enter Your First Name" name="firstname" required>
+        </div>
+         <div class="field">
+          <label for="">Last Name</label>
+          <input type="text" placeholder="Enter Your Last Name" name="lastname" required>
+        </div>
+        <div class="field">
+          <label for="">Email</label>
+          <input type="text" placeholder="Enter Your Email" name="email" required>
+        </div>
+         <div class="field">
+          <label for="">Phone No</label>
+          <input type="text" placeholder="Enter Your Phone No" name="phoneNo" required>
+        </div>
+         <div class="field">
+          <P>Gender</P>
+        </div>
+        <div class="field dis-row">
+          <input type="radio" id="" name="gender" value="male">
+          <label for="Male">Male</label>
+          <input type="radio" id="" name="gender" value="female">
+          <label for="Male">Female</label>
+        </div>
+        <div class="field">
+          <label for="">Password</label>
+          <input type="password" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter Your password" name="password" required>
+        </div>
+         <div class="field">
+          <label for="">Confirm Password</label>
+          <input type="password" placeholder="Enter Your password" name="confirmpassword" required>
+        </div>
+        </div>
+        <div class="pass-section flex">
+          <div class="input-item">
+            <input type="checkbox" name="cbox" id="ckbox" required>
+            <span class="pass">I agree all the <span class="underline">Terms & Conditions</span></span>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Create An Account</button>
+        <div class="footer">
+          <p>Already have an account <a href="/login" class="underline">Log In</a></p>
+        </div>
+      </form>
+    </section>
+  </div>
+  </div>
+  {{>footer}}
+    <script src="./js/reg.js"></script>
+</body>
+</html>
